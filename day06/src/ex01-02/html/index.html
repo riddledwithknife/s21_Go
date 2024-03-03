@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../css/index_styles.css" rel="stylesheet" type="text/css">
+    <title>Title</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">My Blog</h1>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <div class="row">
+        <div class="column">
+            {{range .BlogPosts}}
+            <div class="card">
+                <div class="card-content">
+                    <h2 class="card-title">{{.Title}}</h2>
+                    <h5 class="card-date">{{.ArticleDate}}</h5>
+                    <p class="card-text">{{.ArticleText}}</p>
+                </div>
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+    <div class="pagination">
+        {{range .PageNumbers}}
+        <button id="page{{.}}" onclick="redirectToPage({{.}})">{{.}}</button>
+        {{end}}
+    </div>
+
+    <script>
+        function redirectToPage(pageNumber) {
+            window.location.href = "/?page=" + pageNumber;
+        }
+    </script>
+</main>
+
+<img alt="Image" class="corner-image" src="../images/amazing_logo.png">
+
+</body>
+</html>

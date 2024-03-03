@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Blog Admin Panel</title>
+    <link href="../css/admin_styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Blog Admin Panel</h1>
+    <form action="/logout" class="logout-form" method="post">
+        <button class="logout-button">Logout</button>
+    </form>
+
+    <form action="#" method="post">
+        <label for="title">Title:</label>
+        <input id="title" name="title" required type="text">
+
+        <label for="article_text">Article Text:</label>
+        <textarea id="article_text" name="article_text" required rows="10"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+File: ex01.test
+Type: cpu
+Time: Feb 23, 2024 at 11:48pm (+0530)
+Duration: 3.32s, Total samples = 2.88s (86.63%)
+Showing nodes accounting for 2.80s, 97.22% of 2.88s total
+Dropped 26 nodes (cum <= 0.01s)
+      flat  flat%   sum%        cum   cum%
+     1.25s 43.40% 43.40%      1.25s 43.40%  runtime.kevent
+     0.29s 10.07% 53.47%      0.55s 19.10%  runtime.mallocgc
+     0.21s  7.29% 60.76%      0.21s  7.29%  runtime.pthread_cond_wait
+     0.16s  5.56% 66.32%      0.64s 22.22%  day07/ex00.MinCoins (inline)
+     0.15s  5.21% 71.53%      0.63s 21.88%  runtime.growslice
+     0.14s  4.86% 76.39%      0.14s  4.86%  runtime.madvise
+     0.08s  2.78% 79.17%      0.08s  2.78%  runtime.usleep
+     0.07s  2.43% 81.60%      0.07s  2.43%  runtime.nextFreeFast (inline)
+     0.07s  2.43% 84.03%      0.07s  2.43%  runtime.pthread_kill
+     0.05s  1.74% 85.76%      0.05s  1.74%  runtime.deductAssistCredit
+     0.05s  1.74% 87.50%      0.07s  2.43%  runtime.roundupsize (inline)
+     0.04s  1.39% 88.89%      0.04s  1.39%  runtime.releasem (inline)
+     0.03s  1.04% 89.93%      0.40s 13.89%  day07/ex00.MinCoins2
+     0.03s  1.04% 90.97%      0.03s  1.04%  runtime.pthread_cond_timedwait_relative_np
+     0.03s  1.04% 92.01%      0.05s  1.74%  sort.insertionSort
+     0.02s  0.69% 92.71%      0.66s 22.92%  day07/ex01.BenchmarkMinCoins
+     0.02s  0.69% 93.40%      0.03s  1.04%  runtime.(*mspan).writeHeapBitsSmall
+     0.02s  0.69% 94.10%      0.02s  0.69%  runtime.divRoundUp (inline)
+     0.02s  0.69% 94.79%      0.02s  0.69%  runtime.getMCache (inline)
+     0.02s  0.69% 95.49%      0.02s  0.69%  runtime.memclrNoHeapPointers
+     0.02s  0.69% 96.18%      0.02s  0.69%  sort.reverse.Less
+     0.01s  0.35% 96.53%      0.04s  1.39%  runtime.heapSetType
+     0.01s  0.35% 96.88%      0.04s  1.39%  runtime.stealWork
+     0.01s  0.35% 97.22%      0.06s  2.08%  sort.pdqsort
+         0     0% 97.22%      0.40s 13.89%  day07/ex01.BenchmarkMinCoins2
+         0     0% 97.22%      0.04s  1.39%  runtime.(*gcControllerState).enlistWorker
+         0     0% 97.22%      0.04s  1.39%  runtime.(*gcWork).balance
+         0     0% 97.22%      0.15s  5.21%  runtime.(*mheap).alloc.func1
+         0     0% 97.22%      0.15s  5.21%  runtime.(*mheap).allocSpan
+         0     0% 97.22%      0.06s  2.08%  runtime.convTslice
+         0     0% 97.22%      0.31s 10.76%  runtime.findRunnable
+         0     0% 97.22%      0.03s  1.04%  runtime.forEachPInternal
+         0     0% 97.22%      0.08s  2.78%  runtime.gcBgMarkWorker.func2
+         0     0% 97.22%      0.08s  2.78%  runtime.gcDrain
+         0     0% 97.22%      0.07s  2.43%  runtime.gcDrainMarkWorkerDedicated (inline)
+         0     0% 97.22%      0.02s  0.69%  runtime.gcMarkDone.forEachP.func5
+         0     0% 97.22%      1.22s 42.36%  runtime.gcStart.func3
+         0     0% 97.22%      0.05s  1.74%  runtime.gopreempt_m (inline)
+         0     0% 97.22%      0.05s  1.74%  runtime.goschedImpl
+         0     0% 97.22%      0.05s  1.74%  runtime.lock (inline)
+         0     0% 97.22%      0.05s  1.74%  runtime.lock2
+         0     0% 97.22%      0.05s  1.74%  runtime.lockWithRank (inline)
+         0     0% 97.22%      0.21s  7.29%  runtime.mPark (inline)
+         0     0% 97.22%      0.03s  1.04%  runtime.markroot
+         0     0% 97.22%      0.03s  1.04%  runtime.markroot.func1
+         0     0% 97.22%      0.30s 10.42%  runtime.mcall
+         0     0% 97.22%      0.05s  1.74%  runtime.morestack
+         0     0% 97.22%      1.25s 43.40%  runtime.netpoll
+         0     0% 97.22%      0.10s  3.47%  runtime.newobject
+         0     0% 97.22%      0.05s  1.74%  runtime.newstack
+         0     0% 97.22%      0.21s  7.29%  runtime.notesleep
+         0     0% 97.22%      0.03s  1.04%  runtime.notetsleep
+         0     0% 97.22%      0.03s  1.04%  runtime.notetsleep_internal
+         0     0% 97.22%      0.05s  1.74%  runtime.osyield (inline)
+         0     0% 97.22%      0.30s 10.42%  runtime.park_m
+         0     0% 97.22%      0.07s  2.43%  runtime.preemptM
+         0     0% 97.22%      0.04s  1.39%  runtime.preemptone
+         0     0% 97.22%      0.03s  1.04%  runtime.runqgrab
+         0     0% 97.22%      0.03s  1.04%  runtime.runqsteal
+         0     0% 97.22%      0.31s 10.76%  runtime.schedule
+         0     0% 97.22%      0.24s  8.33%  runtime.semasleep
+         0     0% 97.22%      0.07s  2.43%  runtime.signalM (inline)
+         0     0% 97.22%      1.22s 42.36%  runtime.startTheWorldWithSema
+         0     0% 97.22%      0.21s  7.29%  runtime.stopm
+         0     0% 97.22%      0.03s  1.04%  runtime.suspendG
+         0     0% 97.22%      0.14s  4.86%  runtime.sysUsed (inline)
+         0     0% 97.22%      0.14s  4.86%  runtime.sysUsedOS (inline)
+         0     0% 97.22%      1.48s 51.39%  runtime.systemstack
+         0     0% 97.22%      0.02s  0.69%  runtime.wakep
+         0     0% 97.22%      0.10s  3.47%  sort.Reverse (inline)
+         0     0% 97.22%      0.06s  2.08%  sort.Sort
+         0     0% 97.22%      1.06s 36.81%  testing.(*B).launch
+         0     0% 97.22%      1.06s 36.81%  testing.(*B).runN

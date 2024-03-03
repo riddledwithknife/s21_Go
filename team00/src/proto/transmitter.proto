@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package transmitter;
+
+option go_package = "../transmitter";
+
+service Transmitter {
+    rpc ListRequests(Request) returns (stream Response) {}
+}
+
+message Request {
+    
+}
+
+message Response {
+    string uuid = 1;
+    double frequency = 2;
+    int64 timestamp = 3;
+}

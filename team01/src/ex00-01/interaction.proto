@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package database;
+
+service DatabaseStore {
+  rpc Set(SetRequest) returns (ValueResponse) {}
+  rpc Get(GetRequest) returns (EmptyResponse) {}
+  rpc Delete(DeleteRequest) returns (EmptyResponse) {}
+}
+
+message SetRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message GetRequest {
+  string key = 1;
+}
+
+message DeleteRequest {
+  string key = 1;
+}
+
+message ValueResponse {
+  string value = 1;
+}
+
+message EmptyResponse {}
